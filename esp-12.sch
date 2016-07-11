@@ -1,0 +1,327 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ESP8266
+LIBS:Diodes
+LIBS:esp-12-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LD1117S33TR U1
+U 1 1 577F2F34
+P 4150 1550
+F 0 "U1" H 4150 1800 50  0000 C CNN
+F 1 "LD1117S33TR" H 4150 1750 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 4150 1650 50  0000 C CNN
+F 3 "" H 4150 1550 50  0000 C CNN
+	1    4150 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST FLASH1
+U 1 1 577F2FF3
+P 6300 1100
+F 0 "FLASH1" H 6300 1160 50  0000 C CNN
+F 1 "JUMPER" H 6300 1030 50  0000 C CNN
+F 2 "Connect:PINHEAD1-2" H 6300 1100 50  0001 C CNN
+F 3 "" H 6300 1100 50  0000 C CNN
+	1    6300 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 577F3726
+P 6100 3600
+F 0 "#PWR01" H 6100 3350 50  0001 C CNN
+F 1 "GND" H 6100 3450 50  0000 C CNN
+F 2 "" H 6100 3600 50  0000 C CNN
+F 3 "" H 6100 3600 50  0000 C CNN
+	1    6100 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 577F3740
+P 4150 1800
+F 0 "#PWR02" H 4150 1550 50  0001 C CNN
+F 1 "GND" H 4150 1650 50  0000 C CNN
+F 2 "" H 4150 1800 50  0000 C CNN
+F 3 "" H 4150 1800 50  0000 C CNN
+	1    4150 1800
+	1    0    0    -1  
+$EndComp
+Text GLabel 4300 2900 0    60   Input ~ 0
+RST
+Text GLabel 4300 3000 0    60   Input ~ 0
+ADC
+Text GLabel 3700 3100 0    60   Input ~ 0
+EN
+$Comp
+L +3.3V #PWR03
+U 1 1 577F3AD2
+P 4550 1500
+F 0 "#PWR03" H 4550 1350 50  0001 C CNN
+F 1 "+3.3V" H 4550 1640 50  0000 C CNN
+F 2 "" H 4550 1500 50  0000 C CNN
+F 3 "" H 4550 1500 50  0000 C CNN
+	1    4550 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR04
+U 1 1 577F3AEC
+P 3500 3600
+F 0 "#PWR04" H 3500 3450 50  0001 C CNN
+F 1 "+3.3V" H 3500 3740 50  0000 C CNN
+F 2 "" H 3500 3600 50  0000 C CNN
+F 3 "" H 3500 3600 50  0000 C CNN
+	1    3500 3600
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4300 3200 0    60   Input ~ 0
+GPIO16
+Text GLabel 4300 3300 0    60   Input ~ 0
+GPIO14
+Text GLabel 4300 3400 0    60   Input ~ 0
+GPIO12
+Text GLabel 4300 3500 0    60   Input ~ 0
+GPIO13
+Text GLabel 6100 2900 2    60   Input ~ 0
+TXD0
+Text GLabel 6100 3000 2    60   Input ~ 0
+RXD0
+Text GLabel 6100 3100 2    60   Input ~ 0
+GPIO5
+Text GLabel 6100 3200 2    60   Input ~ 0
+GPIO4
+Text GLabel 6100 3500 2    60   Input ~ 0
+GPIO15
+Text GLabel 5800 1200 0    60   Input ~ 0
+GPIO15
+$Comp
+L GND #PWR05
+U 1 1 577F3B7A
+P 6600 1100
+F 0 "#PWR05" H 6600 850 50  0001 C CNN
+F 1 "GND" H 6600 950 50  0000 C CNN
+F 2 "" H 6600 1100 50  0000 C CNN
+F 3 "" H 6600 1100 50  0000 C CNN
+	1    6600 1100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5800 1000 0    60   Input ~ 0
+GPIO0
+Wire Wire Line
+	6500 1100 6600 1100
+Wire Wire Line
+	3500 3600 4300 3600
+Wire Wire Line
+	3700 3100 4300 3100
+Wire Wire Line
+	3750 3100 3750 3600
+Connection ~ 3750 3600
+Connection ~ 3750 3100
+Wire Wire Line
+	6100 1000 6100 1200
+Connection ~ 6100 1100
+$Comp
+L D D2
+U 1 1 577F3C4F
+P 5950 1200
+F 0 "D2" H 5950 1300 50  0000 C CNN
+F 1 "D" H 5950 1100 50  0000 C CNN
+F 2 "Diodes:DIODE_DO214AB-SMC" H 5950 1200 50  0001 C CNN
+F 3 "" H 5950 1200 50  0000 C CNN
+	1    5950 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D1
+U 1 1 577F3D19
+P 5950 1000
+F 0 "D1" H 5950 1100 50  0000 C CNN
+F 1 "D" H 5950 900 50  0000 C CNN
+F 2 "Diodes:DIODE_DO214AB-SMC" H 5950 1000 50  0001 C CNN
+F 3 "" H 5950 1000 50  0000 C CNN
+	1    5950 1000
+	-1   0    0    1   
+$EndComp
+Text GLabel 6100 3300 2    60   Input ~ 0
+GPIO0
+Text GLabel 6100 3400 2    60   Input ~ 0
+GPIO2
+Text GLabel 5150 4100 3    60   Input ~ 0
+GPIO9
+Text GLabel 5250 4100 3    60   Input ~ 0
+GPIO10
+$Comp
+L +5V #PWR06
+U 1 1 577F3E5F
+P 3750 1500
+F 0 "#PWR06" H 3750 1350 50  0001 C CNN
+F 1 "+5V" H 3750 1640 50  0000 C CNN
+F 2 "" H 3750 1500 50  0000 C CNN
+F 3 "" H 3750 1500 50  0000 C CNN
+	1    3750 1500
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 5450 4100
+NoConn ~ 5350 4100
+NoConn ~ 5050 4100
+NoConn ~ 4950 4100
+$Comp
+L TEST FLASH2
+U 1 1 577F3EB2
+P 6300 1550
+F 0 "FLASH2" H 6300 1610 50  0000 C CNN
+F 1 "JUMPER" H 6300 1480 50  0000 C CNN
+F 2 "Connect:PINHEAD1-2" H 6300 1550 50  0001 C CNN
+F 3 "" H 6300 1550 50  0000 C CNN
+	1    6300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR07
+U 1 1 577F3EF5
+P 6500 1550
+F 0 "#PWR07" H 6500 1400 50  0001 C CNN
+F 1 "+3.3V" H 6500 1690 50  0000 C CNN
+F 2 "" H 6500 1550 50  0000 C CNN
+F 3 "" H 6500 1550 50  0000 C CNN
+	1    6500 1550
+	0    1    1    0   
+$EndComp
+Text GLabel 6100 1550 0    60   Input ~ 0
+GPIO2
+$Comp
+L ESP-12E U2
+U 1 1 577FEB58
+P 5200 3200
+F 0 "U2" H 5200 3100 50  0000 C CNN
+F 1 "ESP-12E" H 5200 3300 50  0000 C CNN
+F 2 "ESP8266:ESP-12E" H 5200 3200 50  0001 C CNN
+F 3 "" H 5200 3200 50  0001 C CNN
+	1    5200 3200
+	1    0    0    -1  
+$EndComp
+Text GLabel 7850 2550 0    60   Input ~ 0
+GPIO0
+Text GLabel 7850 2650 0    60   Input ~ 0
+GPIO2
+Text GLabel 7850 2750 0    60   Input ~ 0
+GPIO4
+Text GLabel 7850 2850 0    60   Input ~ 0
+GPIO5
+Text GLabel 7850 2950 0    60   Input ~ 0
+GPIO9
+Text GLabel 7850 3050 0    60   Input ~ 0
+GPIO10
+Text GLabel 7850 3150 0    60   Input ~ 0
+GPIO12
+Text GLabel 7850 3250 0    60   Input ~ 0
+GPIO13
+Text GLabel 7850 3350 0    60   Input ~ 0
+GPIO14
+Text GLabel 7850 3450 0    60   Input ~ 0
+GPIO15
+Text GLabel 7850 3550 0    60   Input ~ 0
+GPIO16
+$Comp
+L CONN_01X12 P1
+U 1 1 577FEEC1
+P 8050 3100
+F 0 "P1" H 8050 3750 50  0000 C CNN
+F 1 "CONN_01X12" V 8150 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x12" H 8050 3100 50  0001 C CNN
+F 3 "" H 8050 3100 50  0000 C CNN
+	1    8050 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 577FEF62
+P 7850 3650
+F 0 "#PWR08" H 7850 3400 50  0001 C CNN
+F 1 "GND" H 7850 3500 50  0000 C CNN
+F 2 "" H 7850 3650 50  0000 C CNN
+F 3 "" H 7850 3650 50  0000 C CNN
+	1    7850 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X04 P2
+U 1 1 577FEF8B
+P 8050 4150
+F 0 "P2" H 8050 4400 50  0000 C CNN
+F 1 "UART" V 8150 4150 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 8050 4150 50  0001 C CNN
+F 3 "" H 8050 4150 50  0000 C CNN
+	1    8050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 577FEFF8
+P 7850 4300
+F 0 "#PWR09" H 7850 4050 50  0001 C CNN
+F 1 "GND" H 7850 4150 50  0000 C CNN
+F 2 "" H 7850 4300 50  0000 C CNN
+F 3 "" H 7850 4300 50  0000 C CNN
+	1    7850 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L +5V #PWR010
+U 1 1 577FF08B
+P 7850 4200
+F 0 "#PWR010" H 7850 4050 50  0001 C CNN
+F 1 "+5V" H 7850 4340 50  0000 C CNN
+F 2 "" H 7850 4200 50  0000 C CNN
+F 3 "" H 7850 4200 50  0000 C CNN
+	1    7850 4200
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7850 4100 0    60   Input ~ 0
+RXD0
+Text GLabel 7850 4000 0    60   Input ~ 0
+TXD0
+$EndSCHEMATC
